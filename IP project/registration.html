@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Registration Board</title>
+      <link rel = "stylesheet" type = "text/css" href = "style.css">
+
+<script>
+function Registration(form){
+ let firstname=document.getElementById("firstname").value;
+ let lastname=document.getElementById("lastname").value;
+ let userid=document.getElementById("id").value;
+ let gender=document.getElementById("gender").value;
+ let address=document.getElementById("address").value;
+ let email=document.getElementById("email").value;
+ let phonenumber=document.getElementById("phonenumber").value;
+ if(firstname==" "||lastname==" "||userid==" "||gender==""||address==" "||address==" "||email==""||phonenumber==" "){
+  alert("please fullfill all information")
+
+ }
+ else{
+     alert("Succesfully Registered")
+ }
+
+}
+function clear(form)
+{
+ document.getElementById("firstname").value="";
+ document.getElementById("lastname").value="";
+ document.getElementById("id").value="";
+ document.getElementById("gender").value="";
+ document.getElementById("address").value="";
+ document.getElementById("email").value="";
+ document.getElementById("phonenumber").value="";
+}
+
+
+
+</script>
+
+
+
+</head>
+<body>
+<div id="container">
+	<div id="header">
+		
+		<div id="top_info">
+		<h2>Wolkite University Cafeteria Management System </h2>
+		</div>
+		<div id="navbar">
+		<ul>
+			<li><a href="homee.html" >Home</a></li>
+            <li><a href="contact.html"style="margin-left: 10px" >Contact</a></li>
+            <li><a href="about.html"style="margin-left: 10px">About</a></li>
+            <li><a href="help.html"style="margin-left: 10px">Help</a></li>
+            <li><a href="login.html" style="margin-left: 450px;">Login</a></li>
+            <li><a href="registration.html"style="margin-left: 10px;" id="active">Registration</a></li>
+		</ul>
+		</div>
+	</div>
+    <div id="content_area">
+		<div id="left_col">
+		<h2>Home</h2>
+		
+	<ul>
+		    <li><a href="manager.html">Manager</a></li>
+			<li><a href="thicher.html">Thicker</a></li>
+			<li><a href="employee.html">Employee</a></li>
+			<li><a href="student.html" >Student</a></li>
+			<li><a href="material.html" >Material</a></li>
+            <li><a href="food.html" >Food</a></li>
+            <li><a href="service.html" >Services</a></li>
+			<li><a href="groupInformation.html" >Group Information</a></li>
+		</ul>
+		</div>
+
+	<div id="content_area">
+	    
+		<div id="right_col">
+		
+		<div class="right_img">
+		 <img src="registration.jfif" height="200" width="200">
+		</div>
+		<div class="right_info">
+                       <dl>
+                    <dd>
+                     <html>
+<head>
+<h2 style="margin-left: 50px;color: blue;">Registration Form </h2>
+<body>
+<form>
+ <label style="margin-left: 35px;" for="">First Name<span style="color: red;"><sup>*</sup></span>:</label>
+ <input type="text" name="firstname" id="firstname" required placeholder="full name"  pattern="[a-zA-Z]{3,}" title="please enter more than three letters">
+ <br><br>
+ <label style="margin-left: 35px;" for="">Last Name<span style="color: red;"><sup>*</sup></span>:</label>
+ <input type="text" name="lastname" id="lastname" required placeholder="full name"  pattern="[a-zA-Z]{3,}" title="please enter more than three letters">
+ <br><br>
+ <label style="margin-left: 53px;" for="">User ID<span style="color: red;"><sup>*</sup></span>:</label>
+ <input type="text" name="userid" id="id" required placeholder="user id"  pattern="[a-zA-Z0-9]{3,}" title="please enter more than three letters">
+ <br> <br>
+ <label style="margin-left: 53px;" for="">Gender<span style="color: red;"><sup>*</sup></span>:</label>
+ <input type="radio" name="gender" id="gender">Male
+ <input type="radio" name="gender" id="gender">Female
+ <br> <br>
+ <label style="margin-left: 50px;" for="">Address<span style="color: red;"><sup>*</sup></span>:</label>
+ <input type="text" name="address" id="address" placeholder="your address" required pattern="[a-zA-Z]{3,}" title="please enter in more than three letters">
+ <br><br>
+ <label style="margin-left: 65px;" for="">Email<span style="color: red;"><sup>*</sup></span>:</label>
+ <input type="email" name="Email" id="email"required placeholder="your email" pattern="[a-zA-Z0-9]{3,20}@[a-zA-Z]{4,7}.[a-zA-Z]{2,3}" title="please enter valid email address">
+	<br> <br>	
+ <label for="">Phone Number<span style="color: red;"><sup>*</sup></span>:</label>
+		<select name="country" required>
+                <option value="select">--select--</option>
+             	<option value="ETH">ETH(+251)</option>
+                <option value="US">US(+458)</option>
+                <option value="UK">UK(+387)</option>
+                <option value="AUS">AUS(+862)</option>
+                </select>
+ <input type="text" name="Phone_Number" id="phonenumber" required placeholder="your phone" title="please enter a phone number in this format,## ## ## ## ##">
+	<br> <br>	
+ <input style="margin-left: 130px;background-color: green;color: white;" type="submit" onclick="Registration(this.form)" value="Register">
+ <input style="margin-left: 10px;background-color:red;color: white;" type="submit" onclick="clear(this.form)" value="Clear">
+
+</p>
+
+</form>
+
+</head>
+</div>
+</div>
+</div>
+            
+	<div id="footer">
+		Wolkite University Information system 3rd Year Student Group #1,#2 and #3.<br/>
+		&copy; 2013 E.C All Right Reserved.			
+	</div>
+</body>
+</html>

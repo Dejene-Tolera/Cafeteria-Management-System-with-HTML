@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login Board</title>
+      <link rel = "stylesheet" type = "text/css" href = "style.css">
+
+	  <script language="javascript">
+		  var trial=3;
+		function check() { 
+			trial--;
+
+			let username=document.getElementById("username").value;
+			let password=document.getElementById("pass").value;
+
+			if(username != "group1" && password != "group2")
+            { 
+             alert("please enter user name and password combination and you have" + " " + trial + " "  + "possible chance to disable the box")
+			document.getElementById("username").value="";
+			document.getElementById("pass").value="";
+            }
+			
+			if(username == "group1" && password == "group2") {
+				window.open('studentInfo.html')
+			}
+
+			else {
+				if(trial==0)
+				{
+					document.getElementById("username").disabled=true;
+					document.getElementById("pass").disabled=true;
+					document.getElementById("log").disabled=true;
+
+				}
+			}      
+		}
+	</script>
+
+
+	</head>
+<body>
+<div id="container">
+	<div id="header">
+		
+		<div id="top_info">
+		<h2>Wolkite University Cafeteria Management System </h2>
+		</div>
+		<div id="navbar">
+		<ul>
+			<li><a href="homee.html" >Home</a></li>
+            <li><a href="contact.html"style="margin-left: 10px">Contact</a></li>
+            <li><a href="about.html"style="margin-left: 10px">About</a></li>
+            <li><a href="help.html"style="margin-left: 10px">Help</a></li>
+            <li><a href="login.html" style="margin-left: 450px;" id="active">Login</a></li>
+            <li><a href="registration.html"style="margin-left: 10px;">Registration</a></li>
+		</ul>
+		</div>
+	</div>
+    <div id="content_area">
+		<div id="left_col">
+		<h2>Home</h2>
+		
+	<ul>
+		    <li><a href="manager.html">Manager</a></li>
+			<li><a href="thicher.html">Thicker</a></li>
+			<li><a href="employee.html">Employee</a></li>
+			<li><a href="student.html" >Student</a></li>
+			<li><a href="material.html" >Material</a></li>
+            <li><a href="food.html" >Food</a></li>
+            <li><a href="service.html" >Services</a></li>
+			<li><a href="groupInformation.html" >Group Information</a></li>
+		</ul>
+		</div>
+
+	<div id="content_area">
+	    
+		<div id="right_col">
+		
+		<div class="right_img">
+		 <img style="margin-left: 20px;" src="login.jfif" height="180" width="170">
+		</div>
+		<div class="right_info">
+                       <dl>
+                    <dd>
+                     <html>
+<head>
+<h2 style="margin-left: 70px;color: blue;">Login Form </h2>
+<body>
+
+
+ <label style="margin-left: 40px;" for="">User Name<span style="color: red;"><sup>*</sup></span>:</label>
+ <input type="text" name="username" id="username" required placeholder="user name">
+ <br><br>
+ <label style="margin-left: 53px;" for="">Password<span style="color: red;"><sup>*</sup></span>:</label>
+ <input type="password" name="password" id="pass" required placeholder="password">
+ <br> <br>
+ <input style="margin-left: 140px;background-color: green;color: white;" type="submit" id="log" onclick="check()" value="Login">
+ <a href="newacount.html" style="margin-left: 20px; text-decoration: none;">Create new account</a>
+</p>
+
+
+
+</head>
+</div>
+</div>
+</div>
+
+        
+	<div id="footer">
+		Wolkite University Information system 3rd Year Student Group #1,#2 and #3.<br/>
+		&copy; 2013 E.C All Right Reserved.			
+	</div>
+</body>
+</html>

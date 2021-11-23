@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Student Information Board</title>
+      <link rel = "stylesheet" type = "text/css" href = "style.css">
+
+<script language="javascript">
+    function studentInfo(form)
+    { 
+  let fullname=document.getElementById("name").value;
+  let studid=document.getElementById("id").value;
+  let gender=document.getElementById("gender").value;
+  let college=document.getElementsByName("college").value;
+  let department=document.getElementsByName("department").value;
+  let address=document.getElementById("address").value;
+   if(fullname ==""|| studid=="" || gender=="" || college==""|| department==""|| address=="")
+   {
+       alert("please fullfill all information")
+   }
+else
+{
+        alert("Successfuly ate")
+    }}
+</script>
+
+</head>
+<body>
+<div id="container">
+	<div id="header">
+		
+		<div id="top_info">
+		<h2>Wolkite University Cafeteria Management System </h2>
+		</div>
+		<div id="navbar">
+		<ul>
+			<li><a href="homee.html" >Home</a></li>
+            <li><a href="contact.html"style="margin-left: 10px" >Contact</a></li>
+            <li><a href="about.html"style="margin-left: 10px">About</a></li>
+            <li><a href="help.html"style="margin-left: 10px">Help</a></li>
+            <li><a href="login.html" style="margin-left: 450px;" id="active">Login</a></li>
+            <li><a href="registration.html"style="margin-left: 10px;">Registration</a></li>
+		</ul>
+		</div>
+	</div>
+    <div id="content_area">
+		<div id="left_col">
+		<h2>Home</h2>
+		
+	<ul>
+		    <li><a href="manager.html">Manager</a></li>
+			<li><a href="thicher.html">Thicker</a></li>
+			<li><a href="employee.html">Employee</a></li>
+			<li><a href="student.html" >Student</a></li>
+			<li><a href="material.html" >Material</a></li>
+            <li><a href="food.html" >Food</a></li>
+            <li><a href="service.html" >Services</a></li>
+            <li><a href="groupInformation.html" >Group Information</a></li>
+		</ul>
+		</div>
+
+	<div id="content_area">
+	    
+		<div id="right_col">
+		
+		<div class="right_img">
+		 <img src="sudentinfo.jpg" height="200" width="250">
+		</div>
+		<div class="right_info">
+                       <dl>
+                    <dd>
+                     <html>
+<head>
+<h2 style="color:blue; margin-left: 30px;">Student Information Form </h2>
+<body>
+<form>
+ <label style="margin-left: 35px;" for="">Full Name<span style="color: red;"><sup>*</sup></span>:</label>
+ <input type="text" name="fullname" id="name" required placeholder="full name"  pattern="[a-zA-Z]{3,}" title="please enter more than three letters">
+ <br><br>
+ <label style="margin-left: 53px;" for="">Stud ID<span style="color: red;"><sup>*</sup></span>:</label>
+ <input type="text" name="studid" id="id" required placeholder="student id"  pattern="[a-zA-Z0-9]{3,}" title="please enter more than three letters">
+ <br> <br>
+ <label style="margin-left: 53px;" for="">Gender<span style="color: red;"><sup>*</sup></span>:</label>
+ <input type="radio" name="gender" id="gender">Male
+ <input type="radio" name="gender" id="gender">Female
+ <br> <br>
+ 	
+ <label  style="margin-left: 55px;" for="">College<span style="color: red;"><sup>*</sup></span>:</label>
+		<select name="college" required>
+                <option value="select">--select--</option>
+             	<option value="CCI">Computing and Informatics</option>
+                <option value="ENG">Engineering and Technology</option>
+                <option value="MHS">Medical and Health Science</option>
+                <option value="BECO">Businness and Economics </option>
+                <option value="CNS">Computitional and Natural Science </option>
+                <option value="OSS">Other Social Science</option>
+                <option value="Agriculture">Agricultural and Industries</option>
+                <option value="Law">School of Law</option>
+                </select>
+	<br> <br>	
+    <label  style="margin-left: 28px;" for="">Department<span style="color: red;"><sup>*</sup></span>:</label>
+    <select name="department" required>
+            <option value="select">--select--</option>
+            <option value="IS">Information System</option>
+            <option value="CS">Computer Science</option>
+            <option value="SW">Software Engineering</option>
+            <option value="IT">Information Technology </option>
+            <option value="CE">Chemical Engineering </option>
+            <option value="Medicine">Medicine</option>
+            <option value="Economics">Economics</option>
+            <option value="Maths">Mathematics</option>
+            <option value="Psycho">Psychology</option>
+            <option value="Agrobusines">Agro Business</option>
+            <option value="Law">Law</option>
+            </select>
+<br> <br>
+ <label style="margin-left: 52px;" for="">Address<span style="color: red;"><sup>*</sup></span>:</label>
+ <input type="text" name="address" id="address" placeholder="your address" required pattern="[a-zA-Z]{3,}" title="please enter in more than three letters">
+ <br><br>
+ <input style="margin-left: 150px;background-color: green;" type="submit" onclick="studentInfo(this.form)" value="Ate">
+	<a href="homee.html" style="margin-left: 20px;text-decoration: none;">Logout</a>
+</p>
+
+</form>
+
+</head>
+</div>
+</div>
+</div>
+            
+	<div id="footer">
+		Wolkite University Information system 3rd Year Student Group #1,#2 and #3.<br/>
+		&copy; 2013 E.C All Right Reserved.			
+	</div>
+</body>
+</html>
